@@ -24,13 +24,13 @@ const About = () => {
           <img
             src={Img.profile}
             alt="Ibnu-Alinsani"
-            className="rounded-t-full absolute -top-24 right-16 shadow-inner  rounded-b-full"
+            className="absolute right-16 shadow-inner rounded-full backdrop-blur-sm aspect-square object-cover"
             width={"70%"}
             height={"50%"}
           />
         </div>
-        <div className="text-center mt-12">
-          <h1 className="text-white bg-red-600 mt-5 font-samurai text-3xl text-center inline px-4 py-2 rounded-md">
+        <div className="text-center mt-4">
+          <h1 className="text-white bg-red-600 mt-5 font-bold font-samurai text-3xl text-center inline px-4 py-2 rounded-md">
             Hello World!
           </h1>
           <h1 className="font-japan inline-block font-bold text-white text-3xl mt-4">
@@ -41,7 +41,7 @@ const About = () => {
             and i'm <span className="text-red-600">web developer</span>
           </span>
         </div>
-        <ul className="flex items-center justify-center gap-4 mt-12">
+        <ul className="flex items-center justify-center gap-4 mt-8">
           <li>
             <a href="https://github.com/Ibnu-Alinsani">
               <img
