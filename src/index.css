@@ -5,3 +5,11 @@
 .list-nav {
   @apply py-1 px-2 text-sm font-hiroshima text-lg hover:bg-black text-slate-300 font-bold hover:text-lime-200 transition rounded;
 }
+
+.title-section {
+  @apply flex items-center gap-4;
+}
+
+.title {
+  @apply font-japan px-4 py-1 bg-red-600 inline rounded-lg text-white;
+}

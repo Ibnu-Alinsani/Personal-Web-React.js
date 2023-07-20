@@ -14,7 +14,7 @@ function Header() {
   return (
     <header
       className={`backdrop-blur-xl w-full bg-white/30 border-black fixed top-0 transition duration-200 delay-75 overflow-hidden z-10 ${
-        isVisible ? "translate-x-0" : "-translate-y-11"
+        isVisible ? "translate-x-0" : "-translate-y-14"
       }`}
     >
       <ul className="text-center flex justify-evenly my-2">
