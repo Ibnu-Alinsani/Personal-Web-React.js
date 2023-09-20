@@ -13,11 +13,11 @@ function Header() {
 
   return (
     <header
-      className={`backdrop-blur-xl w-full bg-white/30 border-black fixed top-0 transition duration-200 delay-75 overflow-hidden z-10 ${
+      className={`fixed top-0 z-10 w-full overflow-hidden border-black bg-white/30 backdrop-blur-xl transition delay-75 duration-200 ${
         isVisible ? "translate-x-0" : "-translate-y-14"
       }`}
     >
-      <ul className="text-center flex justify-evenly my-2">
+      <ul className="my-2 flex justify-evenly text-center">
         <li className="list-nav">Home</li>
         <li className="list-nav">About</li>
         <li className="list-nav">Service</li>

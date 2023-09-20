@@ -1,31 +1,67 @@
-import react from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendMail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_yw509jf",
+        "template_h6lqheo",
+        form.current,
+        "5w3ltqRRU7GzBscVG"
+      )
+      .then((res) => {
+        console.log("email send successfully", res.text);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
   return (
-    <section className="h-screen mx-4">
+    <section className="h-auto bg-black px-4 py-16 font-azeret text-white">
       <div className="title-section">
-        <h1 className="title">Get in Touch</h1>
-        <span className="block"> - - - -&gt;</span>
-        <h1>連絡する</h1>
+        <h1 className="title">GET IN TOUCH</h1>
+        <span className="block"> ------&gt;</span>
+        <h1 className="z-10 mix-blend-difference">つながろう</h1>
       </div>
-      <div>
-        <form className="bg-sky-500">
-          <h1>halo</h1>
-          <div className="bg-black w-full">
-            <label htmlFor="name">
-              <input type="text" id="name" />
+      <div className="my-8">
+        <form className="" ref={form} onSubmit={sendMail}>
+          <div className="">
+            <label htmlFor="name" className="text-lg">
+              Name
+              <input
+                type="text"
+                className="input"
+                name="from_name"
+              />
+            </label>
+            <label htmlFor="name" className="text-lg">
+              Email
+              <input
+                type="email"
+                className="input"
+                name="from_email"
+              />
+            </label>
+            <label htmlFor="name" className="text-lg">
+              Message
+              <textarea
+                type="tel"
+                className="input min-h-[10rem]"
+                name="message"
+              />
             </label>
           </div>
-          <div className="bg-black w-full">
-            <label htmlFor="name">
-              <input type="text" id="name" />
-            </label>
-          </div>
-          <div className="bg-black w-full">
-            <label htmlFor="name">
-              <input type="text" id="name" />
-            </label>
-          </div>
+          <button
+            className="mt-2 block h-10 
+            w-full rounded-lg bg-white font-bold leading-10 text-black"
+          >
+            SEND EMAIL
+          </button>
         </form>
       </div>
     </section>

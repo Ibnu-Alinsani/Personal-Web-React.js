@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .list-nav {
-  @apply py-1 px-2 text-sm font-hiroshima text-lg hover:bg-black text-slate-300 font-bold hover:text-lime-200 transition rounded;
+  @apply rounded px-2 py-1 font-hiroshima text-lg text-sm font-bold text-slate-300 transition hover:bg-black hover:text-lime-200;
 }
 
 .title-section {
@@ -11,5 +11,9 @@
 }
 
 .title {
-  @apply font-japan px-4 py-1 bg-red-600 inline rounded-lg text-white;
+  @apply inline rounded-lg bg-red-600 px-4 py-1 font-japan text-white;
+}
+
+.input {
+  @apply mb-4 mt-2 block w-full rounded-lg border bg-white px-2 py-4;
 }

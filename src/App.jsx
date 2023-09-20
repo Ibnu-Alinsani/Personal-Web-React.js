@@ -8,7 +8,7 @@ import Contact from "./components/contact";
 
 function App() {
   return (
-    <main className="h-[100rem] bg-stone-100">
+    <main className="bg-black">
       <Header />
       <Home />
       <About />
